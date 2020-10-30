@@ -27,9 +27,7 @@ class MainActivity : AppCompatActivity() {
 
     fun readList(){
 
-        var file : File
-        file= getFileStreamPath("lib1.txt")
-        if (file.exists()){
+
            // val input =Scanner(openFileInput("lib1.txt"))
 
             var inputAsString = resources.openRawResource(R.raw.lib1).bufferedReader().use { it.readText() }
@@ -46,12 +44,9 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        }else
-        {
-            android.widget.Toast.makeText(this, "No hay lista para ver", android.widget.Toast.LENGTH_SHORT).show()
         }
 
     }
 
-    }
+
 
